@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee</title>
+</head>
+<body>
+    <div>
+    <h2>Employee</h2>
+    </div>
+    <div>
+        {%for employee in employees%}
+        <div>
+        <p>Name:{{employee.employee_name}}</p>
+        <p>Address:{{employee.employee_address}}</p>
+        <p>Date_of_Birth:{{employee.employee_birth}}</p>
+        <p>Joined_date:{{employee.employee_join}}</p>
+        <p>Salary:{{employee.employee_salary}}</p>
+        <p>Post:{{employee.employee_post}}</p>
+    </div>
+</body>
+</html>
