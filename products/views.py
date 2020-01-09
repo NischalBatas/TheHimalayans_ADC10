@@ -35,10 +35,10 @@ def post_add_product(request):
     name=request.POST['name']
     price=request.POST['price']
     category=request.POST['category']
-    warrently=request.POST['warrently']
+    
 
 
-    add_product=Product(product_name=name,product_price=price,product_category=category,product_warrently=warrently)
+    add_product=Product(product_name=name,product_price=price,product_category=category)
 
     add_product.save()
 
@@ -49,7 +49,7 @@ def post_update_product(request,id):
     name=request.POST['name']
     price=request.POST['price']
     category=request.POST['category']
-    warrently=request.POST['warrently']
+    
 
 
     update_product=Product.objects.get(id=id)
@@ -57,7 +57,7 @@ def post_update_product(request,id):
     update_product.product_name=name
     update_product.product_price=price
     update_product.product_category=category
-    update_product.product_warrently=warrently
+    
 
     update_product.save()
 
