@@ -57,7 +57,7 @@ ROOT_URLCONF = 'TheHimalayan_ADC10.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["TheHimalayan_ADC10/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
