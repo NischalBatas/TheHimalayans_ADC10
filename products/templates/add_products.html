@@ -12,8 +12,9 @@
     </div>
 
     <div>
-            <form action="../save" method="post">
+            <form action="../save" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
+                <input type="file" name="product_image">
                 <input type="text" name="name" placeholder="Enter Product Name"><br>
                 <input type="number" name="price" placeholder="Enter Product Price"><br>
                 <input type="text" name="category" placeholder="Enter Product Category"><br>

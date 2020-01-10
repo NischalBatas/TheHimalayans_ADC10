@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from .models import Product
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def products_index(request):
@@ -29,9 +30,14 @@ def post_add_product(request):
     name=request.POST['name']
     price=request.POST['price']
     category=request.POST['category']
+    image=request.FILES["product_image"]
+
+    fs=FileSystemStorage()
+    filename=fs.save(image.name,image)
+    urls=fs.url(filename)
 
 
-    add_product=Product(product_name=name,product_price=price,product_category=category)
+    add_product=Product(product_name=name,product_price=price,product_category=category,product_image=urls)
 
     add_product.save()
 
